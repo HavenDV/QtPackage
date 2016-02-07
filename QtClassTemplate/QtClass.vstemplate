@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TemplateData>
+    <Name>Qt Class</Name>
+    <Description>Qt Class Template</Description>
+    <Icon>icon.ico</Icon>
+    <!--<AppliesTo>VisualC++ | VisualC++_Class | VisualC | VC | VC_Class | VisualC_Class</AppliesTo>-->
+    <ProjectType>VC</ProjectType>
+    <DefaultName>Class</DefaultName>
+    <SortOrder>100</SortOrder>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <!--<AppliesTo>VisualC | VC_Class | QtProject</AppliesTo>-->
+  </TemplateData>
+  <TemplateContent><!--$RELATION_LOCATION$ BEFORE FILENAME-->
+    <ProjectItem ReplaceParameters="true" TargetFileName="$CPP_FILENAME$">class.cpp</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$HPP_FILENAME$">class.hpp</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$UI_FILENAME$">form.ui</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>QtWizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=c753aa0f4033d017</Assembly>
+    <FullClassName>QtWizard.QtClassWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Qt Form</Name>
+    <Description>Qt Form(.ui)</Description>
+    <Icon>icon.ico</Icon>
+    <ProjectType>VC</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>form.ui</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="Form Files/$safeitemname$.ui">dialogButtonsBottom.ui</ProjectItem>
+    <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="Form Files/$safeitemname$.ui">dialogButtonsRight.ui</ProjectItem>
+    <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="Form Files/$safeitemname$.ui">mainWindow.ui</ProjectItem>
+    <ProjectItem OpenInEditor="false" ReplaceParameters="true" TargetFileName="Form Files/$safeitemname$.ui">widget.ui</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>QtWizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=c753aa0f4033d017</Assembly>
+    <FullClassName>QtWizard.QtFormWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Template Files">
+      <UniqueIdentifier>{236edf82-ff37-4250-8137-d1fada580d20}</UniqueIdentifier>
+      <Extensions>txt</Extensions>
+    </Filter>
+    <Filter Include="HTML Files">
+      <UniqueIdentifier>{37a13ddf-cba6-46a4-a7f3-0b275a55bea4}</UniqueIdentifier>
+      <Extensions>htm</Extensions>
+    </Filter>
+    <Filter Include="Image Files">
+      <UniqueIdentifier>{0ee4a4ba-ffb7-4bf0-8d04-1d681551c08c}</UniqueIdentifier>
+      <Extensions>bmp</Extensions>
+    </Filter>
+    <Filter Include="Script Files">
+      <UniqueIdentifier>{30adb558-067d-4623-8feb-2179442beb71}</UniqueIdentifier>
+      <Extensions>js</Extensions>
+    </Filter>
+    <Filter Include="Miscellaneous Files">
+      <UniqueIdentifier>{d43085fa-b2cc-4b18-bb0c-655b06bdeed8}</UniqueIdentifier>
+      <Extensions>vsz;vsdir;ico;vcxproj;csproj;css;inf</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Templates\1033\ReadMe.txt">
+      <Filter>Template Files</Filter>
+    </Text>
+    <Text Include="Templates\1033\Sample.txt">
+      <Filter>Template Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Templates\1033\Templates.inf">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="Wizard1.vsz">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="Scripts\1033\default.js">
+      <Filter>Script Files</Filter>
+    </None>
+    <None Include="default.vcxproj">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="Wizard1.vsdir">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="HTML\1033\default.htm">
+      <Filter>HTML Files</Filter>
+    </None>
+    <None Include="1033\NewStyles.css">
+      <Filter>Miscellaneous Files</Filter>
+    </None>
+    <None Include="HTML\1033\Page_2.htm">
+      <Filter>HTML Files</Filter>
+    </None>
+    <None Include="HTML\1033\Page_3.htm">
+      <Filter>HTML Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Wizard1.ico">
+      <Filter>Miscellaneous Files</Filter>
+    </Image>
+    <Image Include="Images\Wizard1.gif" />
+    <Image Include="Images\Wizard1_Background.gif" />
+    <Image Include="1033\Images\DottedHori.gif" />
+    <Image Include="1033\Images\DottedVert.gif" />
+    <Image Include="1033\Images\spacer.gif" />
+  </ItemGroup>
+</Project>

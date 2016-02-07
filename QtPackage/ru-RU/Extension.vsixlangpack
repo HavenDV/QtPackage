@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VsixLanguagePack Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema-lp/2010">
+  <LocalizedName>Qt Package</LocalizedName>
+  <LocalizedDescription>Полностью повторяет поведение Qt VS Addin</LocalizedDescription>
+  <!--<License>ru\Eula.rtf</License>
+  <MoreInfoUrl> https://msdn.microsoft.com/?action=SelectLocale&currentLocale=en-US&newLocale=ru-RU&fromPage=https%3a%2f%2fvisualstudiogallery.msdn.microsoft.com%2fc89ff880-8509-47a4-a262-e4fa07168408 </MoreInfoUrl>-->
+</VsixLanguagePack>

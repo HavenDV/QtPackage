@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+  <Extern href="stdidcmd.h"/>
+
+  <!--This header contains the command ids for the menus provided by the shell. -->
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidVSPackage1">
+    <Groups>
+      <Group guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup1" priority="0x0600">
+        <Parent guid="guidVSPackage1MenuSet" id="TopLevelMenu"/>
+      </Group>
+      <Group guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup2" priority="0x0700">
+        <Parent guid="guidVSPackage1MenuSet" id="TopLevelMenu"/>
+      </Group>
+      <Group guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup3" priority="0x0800">
+        <Parent guid="guidVSPackage1MenuSet" id="TopLevelMenu"/>
+      </Group>
+      <Group guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup4" priority="0x0900">
+        <Parent guid="guidVSPackage1MenuSet" id="TopLevelMenu"/>
+      </Group>
+      <Group guid="guidVSPackage1GroupSet" id="SolutionGroup1" priority="0x08FA">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_SOLNNODE"/>
+      </Group>
+      <Group guid="guidVSPackage1GroupSet" id="SolutionGroup2" priority="0x08FF">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_SOLNNODE"/>
+      </Group>
+      <Group guid="guidVSPackage1GroupSet" id="ProjectGroup1" priority="0x07FA">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE"/>
+      </Group>
+      <Group guid="guidVSPackage1GroupSet" id="ProjectGroup2" priority="0x07FB">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE"/>
+      </Group>
+      <Group guid="guidVSPackage1GroupSet" id="ProjectGroup3" priority="0x07FC">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE"/>
+      </Group>
+      <Group guid="guidVSPackage1GroupSet" id="ItemGroup1" priority="0x07FF">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+      <Group guid="guidVSPackage1GroupSet" id="HelpGroup1" priority="0x01FF">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_HELP" />
+      </Group>
+    </Groups>
+
+    <Menus>
+      <Menu guid="guidVSPackage1MenuSet" id="TopLevelMenu" priority="0x700" type="Menu">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_FILEEDITVIEW" />
+        <Strings>
+          <ButtonText>QT5</ButtonText>
+          <CommandName>QT5</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <Buttons>
+      <Button guid="guidVSPackage1CmdSet" id="LaunchDesignerCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup1" />
+        <Icon guid="guidQtDesigner" id="bmpDesigner" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>LaunchDesigner</CommandName>
+          <ButtonText>Launch Designer</ButtonText>
+          <ToolTipText>This will start Qt Designer.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="LaunchLinguistCommandId" priority="0x0200" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup1" />
+        <Icon guid="guidQtLinguist" id="bmpLinguist" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>LaunchLinguist</CommandName>
+          <ButtonText>Launch Linguist</ButtonText>
+          <ToolTipText>This will start Qt Linguist.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="reinstallCommandId" priority="0x0380" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup1" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>ReinstallTemplates</CommandName>
+          <ButtonText>Reinstall templates and register libraries</ButtonText>
+          <ToolTipText>Reinstall templates and register libraries(regasm). Need administation privilegies.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="ImportProFileCommandId" priority="0x0300" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup2" />
+        <Icon guid="guidQtImportPro" id="bmpImportPro" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>ImportProFile</CommandName>
+          <ButtonText>Open Qt Project File (.pro)...</ButtonText>
+          <ToolTipText>Opens a Qt Project File (.pro) and creates a new solution respectively adds a new project to the current solution.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="ImportPriFileCommandId" priority="0x0400" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup2" />
+        <Icon guid="guidQtImportPri" id="bmpImportPri" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <CommandName>ImportPriFile</CommandName>
+          <ButtonText>Import .pri File to Project...</ButtonText>
+          <ToolTipText>This will import a .pri file and create a Qt project from it.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="ExportPriFileCommandId" priority="0x0500" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup2" />
+        <Icon guid="guidQtExportPri" id="bmpExportPri" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <CommandName>ExportPriFile</CommandName>
+          <ButtonText>Export Project to .pri File...</ButtonText>
+          <ToolTipText>This will export the current project to a .pri file.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="ExportProFileCommandId" priority="0x0600" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup2" />
+        <Icon guid="guidQtExportPro" id="bmpExportPro" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <CommandName>ExportProFile</CommandName>
+          <ButtonText>Create basic .pro File...</ButtonText>
+          <ToolTipText>This will export the current project to a Qt Project file (.pro).</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="CreateNewTranslationFileCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup3" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <CommandName>CreateNewTranslationFile</CommandName>
+          <ButtonText>Create new Translation File</ButtonText>
+          <ToolTipText>Creates a new translation file for Qt Linguist</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="lupdateProjectCommandId" priority="0x2" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="ProjectGroup2" />
+        <Icon guid="guidQtLinguist" id="bmpLinguist" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>lupdateProject</CommandName>
+          <ButtonText>lupdate all .ts files in project</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="lreleaseProjectCommandId" priority="0x3" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="ProjectGroup2" />
+        <Icon guid="guidQtLinguist" id="bmpLinguist" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>lreleaseProject</CommandName>
+          <ButtonText>lrelease all .ts files in project</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="lupdateSolutionCommandId" priority="0x1" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="SolutionGroup1" />
+        <Icon guid="guidQtLinguist" id="bmpLinguist" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>lupdateSolution</CommandName>
+          <ButtonText>lupdate all .ts files in solution</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="lreleaseSolutionCommandId" priority="0x2" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="SolutionGroup1" />
+        <Icon guid="guidQtLinguist" id="bmpLinguist" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>lreleaseSolution</CommandName>
+          <ButtonText>lrelease all .ts files in solution</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="ConvertToQtCommandId" priority="0x0200" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup3" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <Strings>
+          <CommandName>ConvertToQt</CommandName>
+          <ButtonText>Convert project to Qt Add-in project</ButtonText>
+          <ToolTipText>Convert project to Qt Add-in project</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="ConvertToQMakeCommandId" priority="0x0300" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup3" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <CommandName>ConvertToQMake</CommandName>
+          <ButtonText>Convert project to QMake generated project</ButtonText>
+          <ToolTipText>Convert project to QMake generated project</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="ProjectQtSettingsCommandId" priority="0x0400" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup3" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultDisabled</CommandFlag>
+        <Strings>
+          <CommandName>ProjectQtSettings</CommandName>
+          <ButtonText>Qt Project Settings</ButtonText>
+          <ToolTipText>Edit Qt settings of the current project.</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="ChangeProjectQtVersionCommandId" priority="0x0500" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup3" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <Strings>
+          <CommandName>ChangeProjectQtVersion</CommandName>
+          <ButtonText>Change project's Qt Version</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="VSQtOptionsCommandId" priority="0x0102" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="TopLevelMenuGroup4" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>VSQtOptions</CommandName>
+          <ButtonText>Qt Options</ButtonText>
+          <ToolTipText>Configure the default Qt settings</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="ChangeSolutionQtVersionCommandId" priority="0x1" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="SolutionGroup2" />
+        <Icon guid="guidQtQt" id="bmpQt" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>ChangeSolutionQtVersion</CommandName>
+          <ButtonText>Change Solution's Qt Version</ButtonText>
+          <ToolTipText>Change the Qt version for this solution and all contained projects .</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="lupdateCommandId" priority="0x1" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="ItemGroup1" />
+        <Icon guid="guidQtLinguist" id="bmpLinguist" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>lupdate</CommandName>
+          <ButtonText>lupdate</ButtonText>
+          <ToolTipText>lupdate</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="lreleaseCommandId" priority="0x2" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="ItemGroup1" />
+        <Icon guid="guidQtLinguist" id="bmpLinguist" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>lrelease</CommandName>
+          <ButtonText>lrelease</ButtonText>
+          <ToolTipText>lrelease</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="guidVSPackage1CmdSet" id="helpQtCommandId" priority="0x3" type="Button">
+        <Parent guid="guidVSPackage1GroupSet" id="HelpGroup1" />
+        <Strings>
+          <CommandName>helpQt</CommandName>
+          <ButtonText>Qt5 Help</ButtonText>
+          <ToolTipText>Qt5 Help</ToolTipText>
+        </Strings>
+      </Button>
+      
+    </Buttons>
+    
+    <Bitmaps>
+      <Bitmap guid="guidQtQt" href="Resources\Qt.bmp" />
+      <Bitmap guid="guidQtAssistant" href="Resources\Assistant.bmp" />
+      <Bitmap guid="guidQtDesigner" href="Resources\Designer.bmp" />
+      <Bitmap guid="guidQtLinguist" href="Resources\Linguist.bmp" />
+      <Bitmap guid="guidQtImportPro" href="Resources\ImportPro.bmp" />
+      <Bitmap guid="guidQtImportPri" href="Resources\ImportPri.bmp" />
+      <Bitmap guid="guidQtExportPri" href="Resources\ExportPri.bmp" />
+      <Bitmap guid="guidQtExportPro" href="Resources\ExportPro.bmp" />
+    </Bitmaps>
+    
+  </Commands>
+
+  <CommandPlacements>
+    <CommandPlacement guid="guidVSPackage1CmdSet" id="ImportPriFileCommandId" priority="0x1">
+      <Parent guid="guidVSPackage1GroupSet" id="ProjectGroup1" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidVSPackage1CmdSet" id="ExportPriFileCommandId" priority="0x2">
+      <Parent guid="guidVSPackage1GroupSet" id="ProjectGroup1" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidVSPackage1CmdSet" id="ExportProFileCommandId" priority="0x3">
+      <Parent guid="guidVSPackage1GroupSet" id="ProjectGroup1" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidVSPackage1CmdSet" id="CreateNewTranslationFileCommandId" priority="0x1">
+      <Parent guid="guidVSPackage1GroupSet" id="ProjectGroup2" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidVSPackage1CmdSet" id="ConvertToQtCommandId" priority="0x1">
+      <Parent guid="guidVSPackage1GroupSet" id="ProjectGroup3" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidVSPackage1CmdSet" id="ConvertToQMakeCommandId" priority="0x2">
+      <Parent guid="guidVSPackage1GroupSet" id="ProjectGroup3" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidVSPackage1CmdSet" id="ProjectQtSettingsCommandId" priority="0x3">
+      <Parent guid="guidVSPackage1GroupSet" id="ProjectGroup3" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidVSPackage1CmdSet" id="ChangeProjectQtVersionCommandId" priority="0x4">
+      <Parent guid="guidVSPackage1GroupSet" id="ProjectGroup3" />
+    </CommandPlacement>
+  </CommandPlacements>
+
+  <KeyBindings>
+    <KeyBinding guid="guidVSPackage1CmdSet" id="helpQtCommandId"
+        key1="VK_F1" mod1="Alt" editor="guidVSStd97" />
+  </KeyBindings>
+
+  <Symbols>
+    
+    <GuidSymbol name="guidVSPackage1" value="{ddd4b302-4a66-4606-a193-af0cb0d67e5c}" />
+    
+    <GuidSymbol name="guidVSPackage1GroupSet" value="{C62F9412-654A-493E-BEA0-0A4F9C9284A9}">
+      <IDSymbol name="TopLevelMenuGroup1" value="0x0000" />
+      <IDSymbol name="TopLevelMenuGroup2" value="0x0001" />
+      <IDSymbol name="TopLevelMenuGroup3" value="0x0002" />
+      <IDSymbol name="TopLevelMenuGroup4" value="0x0003" />
+      <IDSymbol name="SolutionGroup1" value="0x0004" />
+      <IDSymbol name="SolutionGroup2" value="0x0005" />
+      <IDSymbol name="ProjectGroup1" value="0x0006" />
+      <IDSymbol name="ProjectGroup2" value="0x0007" />
+      <IDSymbol name="ProjectGroup3" value="0x0008" />
+      <IDSymbol name="ItemGroup1" value="0x0009" />
+      <IDSymbol name="HelpGroup1" value="0x000A" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidVSPackage1MenuSet" value="{1570AAC5-E3CA-4143-B634-EC58CA683C67}">
+      <IDSymbol name="TopLevelMenu" value="0x0000" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidVSPackage1CmdSet" value="{36bf54a4-75f5-44e6-bed1-5b264018a433}">
+      <IDSymbol name="LaunchDesignerCommandId" value="0x0100" />
+      <IDSymbol name="LaunchLinguistCommandId" value="0x0101" />
+      <IDSymbol name="ImportProFileCommandId" value="0x0102" />
+      <IDSymbol name="ImportPriFileCommandId" value="0x0103" />
+      <IDSymbol name="ExportPriFileCommandId" value="0x0104" />
+      <IDSymbol name="ExportProFileCommandId" value="0x0105" />
+      <IDSymbol name="CreateNewTranslationFileCommandId" value="0x0106" />
+      <IDSymbol name="lupdateProjectCommandId" value="0x0107" />
+      <IDSymbol name="lreleaseProjectCommandId" value="0x0108" />
+      <IDSymbol name="lupdateSolutionCommandId" value="0x0109" />
+      <IDSymbol name="lreleaseSolutionCommandId" value="0x010A" />
+      <IDSymbol name="ConvertToQtCommandId" value="0x010B" />
+      <IDSymbol name="ConvertToQMakeCommandId" value="0x010C" />
+      <IDSymbol name="ProjectQtSettingsCommandId" value="0x010D" />
+      <IDSymbol name="ChangeProjectQtVersionCommandId" value="0x010E" />
+      <IDSymbol name="VSQtOptionsCommandId" value="0x0110" />
+      <IDSymbol name="ChangeSolutionQtVersionCommandId" value="0x0111" />
+      <IDSymbol name="lupdateCommandId" value="0x0112" />
+      <IDSymbol name="lreleaseCommandId" value="0x0113" />
+      <IDSymbol name="helpQtCommandId" value="0x0114" />
+      <IDSymbol name="reinstallCommandId" value="0x0115" />
+    </GuidSymbol>
+    
+    <GuidSymbol name="guidQtQt" value="{901F19DF-F2CB-4AA2-8D67-9CCCBB877535}" >
+      <IDSymbol name="bmpQt" value="1" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidQtAssistant" value="{6A18B042-DBD1-4C4C-BD77-59E5B069D833}" >
+      <IDSymbol name="bmpAssistant" value="1" />
+    </GuidSymbol>
+    
+    <GuidSymbol name="guidQtDesigner" value="{541DC07F-4E1F-4F11-B7D8-D9340446659F}" >
+      <IDSymbol name="bmpDesigner" value="1" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidQtLinguist" value="{5DA4BF1B-9D0D-49B8-A384-54362C87DE2F}" >
+      <IDSymbol name="bmpLinguist" value="1" />
+    </GuidSymbol>
+    
+    <GuidSymbol name="guidQtImportPro" value="{74C53035-1CFB-4E61-8BAD-66DBDEDD96FE}" >
+      <IDSymbol name="bmpImportPro" value="1" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidQtImportPri" value="{A29975A9-1921-46E5-B869-9C41128EFB51}" >
+      <IDSymbol name="bmpImportPri" value="1" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidQtExportPri" value="{EFDCD74E-97ED-4EEA-B643-593CE7C92C4A}" >
+      <IDSymbol name="bmpExportPri" value="1" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidQtExportPro" value="{0EC6E2AD-0A42-498E-9B0B-2D37AEF0D866}" >
+      <IDSymbol name="bmpExportPro" value="1" />
+    </GuidSymbol>
+
+  </Symbols>
+  
+</CommandTable>

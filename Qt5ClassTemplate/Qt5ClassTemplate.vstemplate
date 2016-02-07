@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Qt5ClassTemplate</Name>
+    <Description>Qt5ClassTemplate</Description>
+    <Icon>Qt5ClassTemplate.ico</Icon>
+    <TemplateID>ffb7c439-dbbe-4192-8fb2-79a27a5d8733</TemplateID>
+    <ProjectType>VC</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Class.cpp</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true">Class.cpp</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
