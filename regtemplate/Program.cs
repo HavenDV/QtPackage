@@ -21,7 +21,7 @@ namespace regtemplate {
             try {
                 registerDll( packagePath + @"Qt5ProjectLib.dll" );
                 registerDll( packagePath + @"Qt5ProjectEngineLib.dll" );
-
+                //hello world
                 deleteDir( vcPath + @"VCAddClass\Qt5 Classes\" );
                 deleteDir( vcPath + @"vcprojects\Qt5 Projects\" );
                 deleteDir( vcPath + @"vcprojectitems\Qt5 Resourses\" );
