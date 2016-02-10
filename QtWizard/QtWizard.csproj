@@ -65,48 +65,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileUtilities.cs" />
-    <Compile Include="ProjectUtilities.cs" />
+    <Compile Include="FormsM\QtClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsM\QtClassForm.Designer.cs">
+      <DependentUpon>QtClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsM\QtFormForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsM\QtFormForm.Designer.cs">
+      <DependentUpon>QtFormForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="QtFormForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QtFormForm.Designer.cs">
-      <DependentUpon>QtFormForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="QtClassWizard.cs" />
-    <Compile Include="QtClassForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QtClassForm.Designer.cs">
-      <DependentUpon>QtClassForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QtFormWizard.cs" />
     <Compile Include="QtWizard.cs" />
-    <Compile Include="WizardFormUtilities.cs" />
+    <Compile Include="UtilitiesM\FileUtilities.cs" />
+    <Compile Include="UtilitiesM\ProjectUtilities.cs" />
+    <Compile Include="UtilitiesM\WizardFormUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormsM\QtClassForm.resx">
+      <DependentUpon>QtClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsM\QtFormForm.resx">
+      <DependentUpon>QtFormForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="QtClassForm.resx">
-      <DependentUpon>QtClassForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QtFormForm.resx">
-      <DependentUpon>QtFormForm.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dialogBottom.Image.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dialogButtonsBottomPreview.png" />
@@ -119,6 +116,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\widgetPreview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Qt5Class.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

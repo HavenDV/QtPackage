@@ -24,7 +24,6 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QtFormForm));
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -87,7 +86,7 @@
             // 
             this.qtPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.qtPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qtPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("qtPictureBox.Image")));
+            this.qtPictureBox.Image = global::QtWizard.Properties.Resources.Qt5Class;
             this.qtPictureBox.Location = new System.Drawing.Point(479, -2);
             this.qtPictureBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.qtPictureBox.Name = "qtPictureBox";
@@ -99,7 +98,7 @@
             // previewPictureBox
             // 
             this.previewPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.previewPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("previewPictureBox.Image")));
+            this.previewPictureBox.Image = global::QtWizard.Properties.Resources.dialogButtonsBottom;
             this.previewPictureBox.Location = new System.Drawing.Point(14, 19);
             this.previewPictureBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.previewPictureBox.Name = "previewPictureBox";

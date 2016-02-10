@@ -53,7 +53,7 @@
 
                 //string dataString = "";
                 //foreach ( var data in dictionary ) {
-                //    dataString += data.Key + ": " + data.Value + "\n";
+                //    dataString += data.Key + ": " + data.Value + Environment.NewLine;
                 //}
                 //MessageBox.Show( dataString );
 
@@ -82,8 +82,8 @@
                     var names = namespaceName.Split( new string[] { "::" },
                                                      StringSplitOptions.None );
                     foreach ( var name in names ) {
-                        namespaceBegin += "\nnamespace " + name + " {\n";
-                        namespaceEnd += "\n}";
+                        namespaceBegin += Environment.NewLine + "namespace " + name + " {";
+                        namespaceEnd += Environment.NewLine + "}";
                     }
                 }
 
@@ -115,15 +115,16 @@
                 dictionary[ "$Q_OBJECT$" ] = qObject;
 
                 var pchInclude = IsUsePrecompiledHeader() ?
-                    "#include <" + GetPrecompiledHeaderName() + ">\n" : "";
+                    "#include <" + GetPrecompiledHeaderName() + ">"
+                    + Environment.NewLine : "";
                 dictionary[ "$PCH_INCLUDE$" ] = pchInclude;
 
                 var isGuiClass = form.isGuiClass;
                 var isInternalGui = isGuiClass && form.isInternalGui;
                 var isInheritGui = isGuiClass && form.isInheritGui;
                 var isPointerGui = isGuiClass && form.isPointerGui;
-                var includeGui = "\n#include \"ui_" + className.ToLower() + ".h\"";
-                var uiInclude = isPointerGui ? "\nnamespace Ui {class " + className + ";}" : 
+                var includeGui = Environment.NewLine + "#include \"ui_" + className.ToLower() + ".h\"";
+                var uiInclude = isPointerGui ? Environment.NewLine + "namespace Ui {class " + className + ";}" : 
                                 isGuiClass ? includeGui : "";
                 var uiIncludeCpp = isPointerGui ? includeGui : "";
                 var uiInherit = isInheritGui ? ", public Ui::" + className  : "";
@@ -131,7 +132,8 @@
                                 isPointerGui ? "Ui::" + className + " *ui;" : "";
                 var uiInit =    isInternalGui ? "ui.setupUi(this);" :
                                 isInheritGui ? "setupUi(this);" :
-                                isPointerGui ? "ui = new Ui::" + className + "();\n\tui->setupUi(this); " : "";
+                                isPointerGui ? "ui = new Ui::" + className + "();" +
+                                Environment.NewLine + "\tui->setupUi(this); " : "";
                 var uiDelete = isPointerGui ? "delete ui;" : "";
                 dictionary[ "$UI_INCLUDE$" ] = uiInclude;
                 dictionary[ "$UI_INCLUDE_CPP$" ] = uiIncludeCpp;
@@ -143,19 +145,21 @@
                 var isIncludeGuard = form.includeGuard;
                 var includeGuardDefine = className.ToUpper() + "_H";
                 var includeGuardBegin = isIncludeGuard ?
-                    "\n#ifndef " + includeGuardDefine + "\n#define " + includeGuardDefine : "";
-                var includeGuardEnd = isIncludeGuard ? "#endif // " + includeGuardDefine : "";
+                    Environment.NewLine + "#ifndef " + includeGuardDefine + 
+                    Environment.NewLine + "#define " + includeGuardDefine : "";
+                var includeGuardEnd = isIncludeGuard ? 
+                    Environment.NewLine + "#endif // " + includeGuardDefine : "";
                 dictionary[ "$INCLUDE_GUARD_BEGIN$" ] = includeGuardBegin;
                 dictionary[ "$INCLUDE_GUARD_END$" ] = includeGuardEnd;
 
                 var centralWidget =
                     baseClass == "QMainWindow" ?
-                        "\r\n  <widget class=\"QMenuBar\" name=\"menuBar\" />" +
-                        "\r\n  <widget class=\"QToolBar\" name=\"mainToolBar\" />" +
-                        "\r\n  <widget class=\"QWidget\" name=\"centralWidget\" />" +
-                        "\r\n  <widget class=\"QStatusBar\" name=\"statusBar\" />" :
+                        Environment.NewLine + "  <widget class=\"QMenuBar\" name=\"menuBar\" />" +
+                        Environment.NewLine + "  <widget class=\"QToolBar\" name=\"mainToolBar\" />" +
+                        Environment.NewLine + "  <widget class=\"QWidget\" name=\"centralWidget\" />" +
+                        Environment.NewLine + "  <widget class=\"QStatusBar\" name=\"statusBar\" />" :
                     baseClass == "QDockWidget" ?
-                        "\r\n  <widget class=\"QWidget\" name=\"widget\" />" : "";
+                        Environment.NewLine + "  <widget class=\"QWidget\" name=\"widget\" />" : "";
                 dictionary[ "$CENTRAL_WIDGET$" ] = centralWidget;
                 
                 //dictionary[ "$rootname$" ];

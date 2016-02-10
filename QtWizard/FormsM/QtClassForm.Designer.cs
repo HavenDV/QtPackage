@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QtClassForm));
             this.finishButton = new System.Windows.Forms.Button();
             this.classTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -234,7 +233,7 @@
             // 
             this.qtPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.qtPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.qtPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("qtPictureBox.Image")));
+            this.qtPictureBox.Image = global::QtWizard.Properties.Resources.Qt5Class;
             this.qtPictureBox.Location = new System.Drawing.Point(488, -2);
             this.qtPictureBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.qtPictureBox.Name = "qtPictureBox";
