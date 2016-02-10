@@ -38,8 +38,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Qt4VS2003\Qt4VSAddin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;VS2008</DefineConstants>
+    <OutputPath>..\QtPackage\Qt5\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>

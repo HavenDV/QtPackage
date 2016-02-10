@@ -65,16 +65,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormsM\QtClassForm.cs">
+    <Compile Include="Forms\QtClassForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsM\QtClassForm.Designer.cs">
+    <Compile Include="Forms\QtClassForm.Designer.cs">
       <DependentUpon>QtClassForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormsM\QtFormForm.cs">
+    <Compile Include="Forms\QtFormForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormsM\QtFormForm.Designer.cs">
+    <Compile Include="Forms\QtFormForm.Designer.cs">
       <DependentUpon>QtFormForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -86,18 +86,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QtFormWizard.cs" />
     <Compile Include="QtWizard.cs" />
-    <Compile Include="UtilitiesM\FileUtilities.cs" />
-    <Compile Include="UtilitiesM\ProjectUtilities.cs" />
-    <Compile Include="UtilitiesM\WizardFormUtilities.cs" />
+    <Compile Include="Utilities\FileUtilities.cs" />
+    <Compile Include="Utilities\ProjectUtilities.cs" />
+    <Compile Include="Utilities\WizardFormUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="key.snk" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FormsM\QtClassForm.resx">
+    <EmbeddedResource Include="Forms\QtClassForm.resx">
       <DependentUpon>QtClassForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsM\QtFormForm.resx">
+    <EmbeddedResource Include="Forms\QtFormForm.resx">
       <DependentUpon>QtFormForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
