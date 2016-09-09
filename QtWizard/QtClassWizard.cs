@@ -143,7 +143,7 @@
                 dictionary[ "$UI_DELETE$" ] = uiDelete;
 
                 var isIncludeGuard = form.includeGuard;
-                var includeGuardDefine = className.ToUpper() + "_H";
+                var includeGuardDefine = className.ToUpper() + "_HPP";
                 var includeGuardBegin = isIncludeGuard ?
                     Environment.NewLine + "#ifndef " + includeGuardDefine + 
                     Environment.NewLine + "#define " + includeGuardDefine : "";
