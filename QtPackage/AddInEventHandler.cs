@@ -766,9 +766,9 @@ namespace QtPackage
                     }
                     if (HelperFunctions.HasQObjectDeclaration(vcFile))
                     {
-#if (VS2010 || VS2012 || VS2013 || VS2015)
+//#if (VS2010 || VS2012 || VS2013 || VS2015)
                         HelperFunctions.EnsureCustomBuildToolAvailable(projectItem);
-#endif
+//#endif
                         qtPro.AddMocStep(vcFile);
                     }
                 }
@@ -790,9 +790,9 @@ namespace QtPackage
                     }
                     if (HelperFunctions.HasQObjectDeclaration(vcFile))
                     {
-#if (VS2010 || VS2012 || VS2013 || VS2015)
+//#if (VS2010 || VS2012 || VS2013 || VS2015)
                         HelperFunctions.EnsureCustomBuildToolAvailable(projectItem);
-#endif
+//#endif
                         qtPro.AddMocStep(vcFile);
                     }
                 }
@@ -810,9 +810,9 @@ namespace QtPackage
                         qtPro.RemoveItem(projectItem);
                         qtPro.AddFileToProject(vcFile.FullPath, ui);
                     }
-#if (VS2010 || VS2012 || VS2013 || VS2015)
+//#if (VS2010 || VS2012 || VS2013 || VS2015)
                     HelperFunctions.EnsureCustomBuildToolAvailable(projectItem);
-#endif
+//#endif
                     qtPro.AddUic4BuildStep(vcFile);
                 }
                 else if (vcFile.Name.EndsWith(".qrc"))
@@ -829,9 +829,9 @@ namespace QtPackage
                         qtPro.RemoveItem(projectItem);
                         qtPro.AddFileToProject(vcFile.FullPath, qrc);
                     }
-#if (VS2010 || VS2012 || VS2013 || VS2015)
+//#if (VS2010 || VS2012 || VS2013 || VS2015)
                     HelperFunctions.EnsureCustomBuildToolAvailable(projectItem);
-#endif
+//#endif
                     qtPro.UpdateRccStep(vcFile, null);
                 }
                 else if (HelperFunctions.IsTranslationFile(vcFile))

@@ -67,14 +67,15 @@ namespace QtPackage {
         }
 
         protected override void Initialize() {
-            Commands.Initialize( this );
-            base.Initialize();
+            try
+            {
+                Commands.Initialize(this);
+                base.Initialize();
 
-            RegisterEditorFactory( new tsEditorFactory( this ) );
-            RegisterEditorFactory( new qrcEditorFactory( this ) );
-            RegisterEditorFactory( new uiEditorFactory( this ) );
+                RegisterEditorFactory(new tsEditorFactory(this));
+                RegisterEditorFactory(new qrcEditorFactory(this));
+                RegisterEditorFactory(new uiEditorFactory(this));
 
-            try {
                 dte = ( DTE )GetService( typeof( DTE ) );
                 help2 = ( Help2 )GetService( typeof( SVsHelp ) );
                 

@@ -4,20 +4,17 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
-using System;
-using System.ComponentModel.Design;
-using System.Globalization;
-using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
-using System.Windows.Forms;
-
 //using Qt5VSAddin;
 using Digia.Qt5ProjectLib;
 using EnvDTE;
+using Microsoft.VisualStudio.Shell;
+using System;
 using System.Collections.Generic;
-using System.Collections;
+using System.ComponentModel.Design;
+using System.Windows.Forms;
 
-namespace QtPackage {
+namespace QtPackage
+{
     /// <summary>
     /// Command handler
     /// </summary>
@@ -89,11 +86,9 @@ namespace QtPackage {
             if ( package == null ) {
                 throw new ArgumentNullException( "package" );
             }
+            this.package = package;
 
             menuCommands = new Dictionary<string, MenuCommand>();
-            this.package = package;
-            commandService = ServiceProvider.GetService( typeof( IMenuCommandService ) ) as OleMenuCommandService;
-
             menuCommands[ "loadDesigner" ] = addCommand( loadDesignerCommandId, loadDesigner );
             menuCommands[ "loadLinguist" ] = addCommand( loadLinguistCommandId, loadLinguist );
             menuCommands[ "importProFile" ] = addCommand( importProFileCommandId, importProFile );
@@ -178,9 +173,11 @@ namespace QtPackage {
                 HelperFunctions.ToggleProjectKind( pro );
             }
         }
+
         private void convertToQMake( object sender, EventArgs e ) {
             convertToQt( sender, e );
         }
+
         private void projectQtSettings( object sender, EventArgs e ) {
             var project = HelperFunctions.GetSelectedQtProject( VSPackage.dte );
             if ( project == null ) {
@@ -296,7 +293,13 @@ namespace QtPackage {
 
         private MenuCommand addCommand( int commandID, EventHandler eventHandler ) {
             if ( commandService == null )
-                return null;
+            {
+                commandService = ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
+            }
+            if (commandService == null)
+            {
+                throw new MissingMemberException("IMenuCommandService not found in ServiceProvider");
+            }
 
             CommandID menuCommandID = new CommandID( MenuGroup, commandID );
             OleMenuCommand menuItem = new OleMenuCommand( eventHandler, menuCommandID );

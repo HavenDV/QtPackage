@@ -85,18 +85,6 @@
             return list;
         }
 
-        /*
-        public static string NormalizePath( string path ) {
-            return Path.GetFullPath( path )
-                       .TrimEnd( Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar )
-                       .ToLowerInvariant();
-        }
-
-        public static bool comparePath( string path1, string path2 ) {
-            return NormalizePath( path1 ) == NormalizePath( path2 );
-        }
-        */
-
         /// <summary>
         /// This method returned project item by path
         /// </summary>

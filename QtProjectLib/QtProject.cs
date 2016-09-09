@@ -296,6 +296,9 @@ namespace Digia.Qt5ProjectLib
 
         public void RemoveModule(QtModule module)
         {
+            if (!HasModule(module))
+                return;
+
             foreach (VCConfiguration config in (IVCCollection)vcPro.Configurations)
             {
                 CompilerToolWrapper compiler = CompilerToolWrapper.Create(config);
