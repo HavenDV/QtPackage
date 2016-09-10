@@ -72,10 +72,41 @@
             this.xmlPatternsLib = new System.Windows.Forms.CheckBox();
             this.openGLLib = new System.Windows.Forms.CheckBox();
             this.scriptLib = new System.Windows.Forms.CheckBox();
+            this.allLibsPage = new System.Windows.Forms.TabPage();
+            this.modulesListBox = new System.Windows.Forms.CheckedListBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.core3DLib = new System.Windows.Forms.CheckBox();
+            this.quickInput3DLib = new System.Windows.Forms.CheckBox();
+            this.dataVisualizationLib = new System.Windows.Forms.CheckBox();
+            this.quickExtras3DLib = new System.Windows.Forms.CheckBox();
+            this.render3DLib = new System.Windows.Forms.CheckBox();
+            this.dBusLib = new System.Windows.Forms.CheckBox();
+            this.quick3DLib = new System.Windows.Forms.CheckBox();
+            this.chartsLib = new System.Windows.Forms.CheckBox();
+            this.quickRender3DLib = new System.Windows.Forms.CheckBox();
+            this.logic3DLib = new System.Windows.Forms.CheckBox();
+            this.bootstrapLib = new System.Windows.Forms.CheckBox();
+            this.extras3DLib = new System.Windows.Forms.CheckBox();
+            this.input3DLib = new System.Windows.Forms.CheckBox();
+            this.quickTemplatesLib = new System.Windows.Forms.CheckBox();
+            this.webEngineWidgetsLib = new System.Windows.Forms.CheckBox();
+            this.quickParticlesLib = new System.Windows.Forms.CheckBox();
+            this.serialBusLib = new System.Windows.Forms.CheckBox();
+            this.webViewLib = new System.Windows.Forms.CheckBox();
+            this.quickControls2Lib = new System.Windows.Forms.CheckBox();
+            this.webEngineCoreLib = new System.Windows.Forms.CheckBox();
+            this.scxmlLib = new System.Windows.Forms.CheckBox();
+            this.quickTestLib = new System.Windows.Forms.CheckBox();
+            this.webEngineLib = new System.Windows.Forms.CheckBox();
+            this.platformSupportLib = new System.Windows.Forms.CheckBox();
+            this.purchasingLib = new System.Windows.Forms.CheckBox();
+            this.packetProtocolLib = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.allLibsPage.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // OptionsPropertyGrid
@@ -93,7 +124,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.okButton);
             this.panel1.Controls.Add(this.cancelButton);
-            this.panel1.Location = new System.Drawing.Point(304, 388);
+            this.panel1.Location = new System.Drawing.Point(297, 388);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(168, 38);
             this.panel1.TabIndex = 9;
@@ -118,6 +149,8 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.allLibsPage);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -459,6 +492,257 @@
             this.scriptLib.Size = new System.Drawing.Size(128, 24);
             this.scriptLib.TabIndex = 50;
             // 
+            // allLibsPage
+            // 
+            this.allLibsPage.Controls.Add(this.modulesListBox);
+            this.allLibsPage.Location = new System.Drawing.Point(4, 22);
+            this.allLibsPage.Name = "allLibsPage";
+            this.allLibsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.allLibsPage.Size = new System.Drawing.Size(455, 318);
+            this.allLibsPage.TabIndex = 2;
+            this.allLibsPage.Text = "All Qt Libs";
+            // 
+            // modulesListBox
+            // 
+            this.modulesListBox.CheckOnClick = true;
+            this.modulesListBox.Enabled = false;
+            this.modulesListBox.FormattingEnabled = true;
+            this.modulesListBox.IntegralHeight = false;
+            this.modulesListBox.Location = new System.Drawing.Point(6, 6);
+            this.modulesListBox.MultiColumn = true;
+            this.modulesListBox.Name = "modulesListBox";
+            this.modulesListBox.Size = new System.Drawing.Size(443, 306);
+            this.modulesListBox.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.quickTemplatesLib);
+            this.tabPage4.Controls.Add(this.webEngineWidgetsLib);
+            this.tabPage4.Controls.Add(this.quickParticlesLib);
+            this.tabPage4.Controls.Add(this.serialBusLib);
+            this.tabPage4.Controls.Add(this.webViewLib);
+            this.tabPage4.Controls.Add(this.quickControls2Lib);
+            this.tabPage4.Controls.Add(this.webEngineCoreLib);
+            this.tabPage4.Controls.Add(this.scxmlLib);
+            this.tabPage4.Controls.Add(this.quickTestLib);
+            this.tabPage4.Controls.Add(this.webEngineLib);
+            this.tabPage4.Controls.Add(this.platformSupportLib);
+            this.tabPage4.Controls.Add(this.purchasingLib);
+            this.tabPage4.Controls.Add(this.packetProtocolLib);
+            this.tabPage4.Controls.Add(this.quickInput3DLib);
+            this.tabPage4.Controls.Add(this.dataVisualizationLib);
+            this.tabPage4.Controls.Add(this.quickExtras3DLib);
+            this.tabPage4.Controls.Add(this.render3DLib);
+            this.tabPage4.Controls.Add(this.dBusLib);
+            this.tabPage4.Controls.Add(this.quick3DLib);
+            this.tabPage4.Controls.Add(this.chartsLib);
+            this.tabPage4.Controls.Add(this.quickRender3DLib);
+            this.tabPage4.Controls.Add(this.logic3DLib);
+            this.tabPage4.Controls.Add(this.bootstrapLib);
+            this.tabPage4.Controls.Add(this.extras3DLib);
+            this.tabPage4.Controls.Add(this.input3DLib);
+            this.tabPage4.Controls.Add(this.core3DLib);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(455, 318);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Add/Remove Qt Modules 2";
+            // 
+            // core3DLib
+            // 
+            this.core3DLib.Location = new System.Drawing.Point(6, 3);
+            this.core3DLib.Name = "core3DLib";
+            this.core3DLib.Size = new System.Drawing.Size(128, 24);
+            this.core3DLib.TabIndex = 30;
+            this.core3DLib.UseVisualStyleBackColor = true;
+            // 
+            // quickInput3DLib
+            // 
+            this.quickInput3DLib.Location = new System.Drawing.Point(6, 147);
+            this.quickInput3DLib.Name = "quickInput3DLib";
+            this.quickInput3DLib.Size = new System.Drawing.Size(128, 24);
+            this.quickInput3DLib.TabIndex = 48;
+            // 
+            // dataVisualizationLib
+            // 
+            this.dataVisualizationLib.Location = new System.Drawing.Point(6, 267);
+            this.dataVisualizationLib.Name = "dataVisualizationLib";
+            this.dataVisualizationLib.Size = new System.Drawing.Size(128, 24);
+            this.dataVisualizationLib.TabIndex = 53;
+            // 
+            // quickExtras3DLib
+            // 
+            this.quickExtras3DLib.Location = new System.Drawing.Point(6, 123);
+            this.quickExtras3DLib.Name = "quickExtras3DLib";
+            this.quickExtras3DLib.Size = new System.Drawing.Size(128, 24);
+            this.quickExtras3DLib.TabIndex = 47;
+            // 
+            // render3DLib
+            // 
+            this.render3DLib.Location = new System.Drawing.Point(6, 195);
+            this.render3DLib.Name = "render3DLib";
+            this.render3DLib.Size = new System.Drawing.Size(135, 24);
+            this.render3DLib.TabIndex = 50;
+            // 
+            // dBusLib
+            // 
+            this.dBusLib.Location = new System.Drawing.Point(6, 291);
+            this.dBusLib.Name = "dBusLib";
+            this.dBusLib.Size = new System.Drawing.Size(118, 24);
+            this.dBusLib.TabIndex = 54;
+            this.dBusLib.UseVisualStyleBackColor = true;
+            // 
+            // quick3DLib
+            // 
+            this.quick3DLib.Location = new System.Drawing.Point(6, 99);
+            this.quick3DLib.Name = "quick3DLib";
+            this.quick3DLib.Size = new System.Drawing.Size(128, 24);
+            this.quick3DLib.TabIndex = 46;
+            this.quick3DLib.UseVisualStyleBackColor = true;
+            // 
+            // chartsLib
+            // 
+            this.chartsLib.Location = new System.Drawing.Point(6, 243);
+            this.chartsLib.Name = "chartsLib";
+            this.chartsLib.Size = new System.Drawing.Size(128, 24);
+            this.chartsLib.TabIndex = 52;
+            this.chartsLib.UseVisualStyleBackColor = true;
+            // 
+            // quickRender3DLib
+            // 
+            this.quickRender3DLib.Location = new System.Drawing.Point(6, 171);
+            this.quickRender3DLib.Name = "quickRender3DLib";
+            this.quickRender3DLib.Size = new System.Drawing.Size(135, 24);
+            this.quickRender3DLib.TabIndex = 49;
+            this.quickRender3DLib.UseVisualStyleBackColor = true;
+            // 
+            // logic3DLib
+            // 
+            this.logic3DLib.Location = new System.Drawing.Point(6, 75);
+            this.logic3DLib.Name = "logic3DLib";
+            this.logic3DLib.Size = new System.Drawing.Size(137, 24);
+            this.logic3DLib.TabIndex = 45;
+            this.logic3DLib.UseVisualStyleBackColor = true;
+            // 
+            // bootstrapLib
+            // 
+            this.bootstrapLib.Location = new System.Drawing.Point(6, 219);
+            this.bootstrapLib.Name = "bootstrapLib";
+            this.bootstrapLib.Size = new System.Drawing.Size(128, 24);
+            this.bootstrapLib.TabIndex = 51;
+            // 
+            // extras3DLib
+            // 
+            this.extras3DLib.Location = new System.Drawing.Point(6, 27);
+            this.extras3DLib.Name = "extras3DLib";
+            this.extras3DLib.Size = new System.Drawing.Size(128, 24);
+            this.extras3DLib.TabIndex = 43;
+            // 
+            // input3DLib
+            // 
+            this.input3DLib.Location = new System.Drawing.Point(6, 51);
+            this.input3DLib.Name = "input3DLib";
+            this.input3DLib.Size = new System.Drawing.Size(120, 24);
+            this.input3DLib.TabIndex = 44;
+            // 
+            // quickTemplatesLib
+            // 
+            this.quickTemplatesLib.Location = new System.Drawing.Point(159, 147);
+            this.quickTemplatesLib.Name = "quickTemplatesLib";
+            this.quickTemplatesLib.Size = new System.Drawing.Size(128, 24);
+            this.quickTemplatesLib.TabIndex = 61;
+            // 
+            // webEngineWidgetsLib
+            // 
+            this.webEngineWidgetsLib.Location = new System.Drawing.Point(159, 267);
+            this.webEngineWidgetsLib.Name = "webEngineWidgetsLib";
+            this.webEngineWidgetsLib.Size = new System.Drawing.Size(128, 24);
+            this.webEngineWidgetsLib.TabIndex = 66;
+            // 
+            // quickParticlesLib
+            // 
+            this.quickParticlesLib.Location = new System.Drawing.Point(159, 123);
+            this.quickParticlesLib.Name = "quickParticlesLib";
+            this.quickParticlesLib.Size = new System.Drawing.Size(128, 24);
+            this.quickParticlesLib.TabIndex = 60;
+            // 
+            // serialBusLib
+            // 
+            this.serialBusLib.Location = new System.Drawing.Point(159, 195);
+            this.serialBusLib.Name = "serialBusLib";
+            this.serialBusLib.Size = new System.Drawing.Size(135, 24);
+            this.serialBusLib.TabIndex = 63;
+            // 
+            // webViewLib
+            // 
+            this.webViewLib.Location = new System.Drawing.Point(159, 291);
+            this.webViewLib.Name = "webViewLib";
+            this.webViewLib.Size = new System.Drawing.Size(118, 24);
+            this.webViewLib.TabIndex = 67;
+            this.webViewLib.UseVisualStyleBackColor = true;
+            // 
+            // quickControls2Lib
+            // 
+            this.quickControls2Lib.Location = new System.Drawing.Point(159, 99);
+            this.quickControls2Lib.Name = "quickControls2Lib";
+            this.quickControls2Lib.Size = new System.Drawing.Size(128, 24);
+            this.quickControls2Lib.TabIndex = 59;
+            this.quickControls2Lib.UseVisualStyleBackColor = true;
+            // 
+            // webEngineCoreLib
+            // 
+            this.webEngineCoreLib.Location = new System.Drawing.Point(159, 243);
+            this.webEngineCoreLib.Name = "webEngineCoreLib";
+            this.webEngineCoreLib.Size = new System.Drawing.Size(128, 24);
+            this.webEngineCoreLib.TabIndex = 65;
+            this.webEngineCoreLib.UseVisualStyleBackColor = true;
+            // 
+            // scxmlLib
+            // 
+            this.scxmlLib.Location = new System.Drawing.Point(159, 171);
+            this.scxmlLib.Name = "scxmlLib";
+            this.scxmlLib.Size = new System.Drawing.Size(135, 24);
+            this.scxmlLib.TabIndex = 62;
+            this.scxmlLib.UseVisualStyleBackColor = true;
+            // 
+            // quickTestLib
+            // 
+            this.quickTestLib.Location = new System.Drawing.Point(159, 75);
+            this.quickTestLib.Name = "quickTestLib";
+            this.quickTestLib.Size = new System.Drawing.Size(137, 24);
+            this.quickTestLib.TabIndex = 58;
+            this.quickTestLib.UseVisualStyleBackColor = true;
+            // 
+            // webEngineLib
+            // 
+            this.webEngineLib.Location = new System.Drawing.Point(159, 219);
+            this.webEngineLib.Name = "webEngineLib";
+            this.webEngineLib.Size = new System.Drawing.Size(128, 24);
+            this.webEngineLib.TabIndex = 64;
+            // 
+            // platformSupportLib
+            // 
+            this.platformSupportLib.Location = new System.Drawing.Point(159, 27);
+            this.platformSupportLib.Name = "platformSupportLib";
+            this.platformSupportLib.Size = new System.Drawing.Size(128, 24);
+            this.platformSupportLib.TabIndex = 56;
+            // 
+            // purchasingLib
+            // 
+            this.purchasingLib.Location = new System.Drawing.Point(159, 51);
+            this.purchasingLib.Name = "purchasingLib";
+            this.purchasingLib.Size = new System.Drawing.Size(120, 24);
+            this.purchasingLib.TabIndex = 57;
+            // 
+            // packetProtocolLib
+            // 
+            this.packetProtocolLib.Location = new System.Drawing.Point(159, 3);
+            this.packetProtocolLib.Name = "packetProtocolLib";
+            this.packetProtocolLib.Size = new System.Drawing.Size(128, 24);
+            this.packetProtocolLib.TabIndex = 55;
+            this.packetProtocolLib.UseVisualStyleBackColor = true;
+            // 
             // FormProjectQtSettings
             // 
             this.AcceptButton = this.okButton;
@@ -478,6 +762,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.allLibsPage.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -528,5 +814,34 @@
         private System.Windows.Forms.CheckBox webSocketsLib;
         private System.Windows.Forms.CheckBox windowsExtrasLib;
         private System.Windows.Forms.CheckBox quickWidgetsLib;
+        private System.Windows.Forms.TabPage allLibsPage;
+        private System.Windows.Forms.CheckedListBox modulesListBox;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.CheckBox core3DLib;
+        private System.Windows.Forms.CheckBox quickInput3DLib;
+        private System.Windows.Forms.CheckBox dataVisualizationLib;
+        private System.Windows.Forms.CheckBox quickExtras3DLib;
+        private System.Windows.Forms.CheckBox render3DLib;
+        private System.Windows.Forms.CheckBox dBusLib;
+        private System.Windows.Forms.CheckBox quick3DLib;
+        private System.Windows.Forms.CheckBox chartsLib;
+        private System.Windows.Forms.CheckBox quickRender3DLib;
+        private System.Windows.Forms.CheckBox logic3DLib;
+        private System.Windows.Forms.CheckBox bootstrapLib;
+        private System.Windows.Forms.CheckBox extras3DLib;
+        private System.Windows.Forms.CheckBox input3DLib;
+        private System.Windows.Forms.CheckBox quickTemplatesLib;
+        private System.Windows.Forms.CheckBox webEngineWidgetsLib;
+        private System.Windows.Forms.CheckBox quickParticlesLib;
+        private System.Windows.Forms.CheckBox serialBusLib;
+        private System.Windows.Forms.CheckBox webViewLib;
+        private System.Windows.Forms.CheckBox quickControls2Lib;
+        private System.Windows.Forms.CheckBox webEngineCoreLib;
+        private System.Windows.Forms.CheckBox scxmlLib;
+        private System.Windows.Forms.CheckBox quickTestLib;
+        private System.Windows.Forms.CheckBox webEngineLib;
+        private System.Windows.Forms.CheckBox platformSupportLib;
+        private System.Windows.Forms.CheckBox purchasingLib;
+        private System.Windows.Forms.CheckBox packetProtocolLib;
     }
 }

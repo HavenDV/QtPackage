@@ -46,6 +46,8 @@ using EnvDTE;
 
 
 using Digia.Qt5ProjectLib;
+using Microsoft.VisualStudio.VCProjectEngine;
+
 namespace QtPackage
 {
     public partial class FormProjectQtSettings : Form
@@ -119,6 +121,35 @@ namespace QtPackage
             windowsExtrasLib.Text = SR.GetString("WindowsExtrasLibrary");
             quickWidgetsLib.Text = SR.GetString("QuickWidgetsLibrary");
 
+            //Qt5.6+
+            core3DLib.Text = "3DCore";//SR.GetString("3DCoreLibrary");
+            extras3DLib.Text = "3DExtras";//SR.GetString("3DExtrasLibrary");
+            input3DLib.Text = "3DInput";//SR.GetString("3DInputLibrary");
+            logic3DLib.Text = "3DLogic";//SR.GetString("3DLogicLibrary");
+            quick3DLib.Text = "3DQuick";//SR.GetString("3DQuickLibrary");
+            quickWidgetsLib.Text = "3DQuickWidgets";//SR.GetString("3DQuickWidgetsLibrary");
+            quickExtras3DLib.Text = "3DQuickExtras";//SR.GetString("3DQuickExtrasLibrary");
+            quickInput3DLib.Text = "3DQuickInput";//SR.GetString("3DQuickInputLibrary");
+            quickRender3DLib.Text = "3DQuickRender";//SR.GetString("3DQuickRenderLibrary");
+            render3DLib.Text = "3DRender";//SR.GetString("3DRenderLibrary");
+            bootstrapLib.Text = "Bootstrap";//SR.GetString("BootstrapLibrary");
+            chartsLib.Text = "Charts";//SR.GetString("ChartsLibrary");
+            dataVisualizationLib.Text = "DataVisualization";//SR.GetString("DataVisualizationLibrary");
+            dBusLib.Text = "DBus";//SR.GetString("DBusLibrary");
+            packetProtocolLib.Text = "PacketProtocol";//SR.GetString("PacketProtocolLibrary");
+            platformSupportLib.Text = "PlatformSupport";//SR.GetString("PlatformSupportLibrary");
+            purchasingLib.Text = "Purchasing";//SR.GetString("PurchasingLibrary");
+            quickTestLib.Text = "QuickTest";//SR.GetString("QuickTestLibrary");
+            quickControls2Lib.Text = "QuickControls2";//SR.GetString("QuickControls2Library");
+            quickParticlesLib.Text = "QuickParticles";//SR.GetString("QuickParticlesLibrary");
+            quickTemplatesLib.Text = "QuickTemplates";//SR.GetString("QuickTemplatesLibrary");
+            scxmlLib.Text = "Scxml";//SR.GetString("ScxmlLibrary");
+            serialBusLib.Text = "SerialBus";//SR.GetString("SerialBusLibrary");
+            webEngineLib.Text = "WebEngine";//SR.GetString("WebEngineLibrary");
+            webEngineCoreLib.Text = "WebEngineCore";//SR.GetString("WebEngineCoreLibrary");
+            webEngineWidgetsLib.Text = "WebEngineWidgets";//SR.GetString("WebEngineWidgetsLibrary");
+            webViewLib.Text = "WebView";//SR.GetString("WebViewLibrary");
+
             // essentials
             AddMapping(threeDLib, QtModule.ThreeD);
             AddMapping(coreLib, QtModule.Core);
@@ -161,8 +192,35 @@ namespace QtPackage
             AddMapping(webSocketsLib, QtModule.WebSockets);
             AddMapping(windowsExtrasLib, QtModule.WindowsExtras);
             AddMapping(quickWidgetsLib, QtModule.QuickWidgets);
-
-
+            
+            //Qt5.6+
+            AddMapping(core3DLib, QtModule.Core3D);
+            AddMapping(extras3DLib, QtModule.Extras3D);
+            AddMapping(input3DLib, QtModule.Input3D);
+            AddMapping(logic3DLib, QtModule.Logic3D);
+            AddMapping(quick3DLib, QtModule.Quick3D);
+            AddMapping(quickExtras3DLib, QtModule.QuickExtras3D);
+            AddMapping(quickInput3DLib, QtModule.QuickInput3D);
+            AddMapping(quickRender3DLib, QtModule.QuickRender3D);
+            AddMapping(render3DLib, QtModule.Render3D);
+            AddMapping(bootstrapLib, QtModule.Bootstrap);
+            AddMapping(chartsLib, QtModule.Charts);
+            AddMapping(dataVisualizationLib, QtModule.DataVisualization);
+            AddMapping(dBusLib, QtModule.DBus);
+            AddMapping(packetProtocolLib, QtModule.PacketProtocol);
+            AddMapping(platformSupportLib, QtModule.PlatformSupport);
+            AddMapping(purchasingLib, QtModule.Purchasing);
+            AddMapping(quickTestLib, QtModule.QuickTest);
+            AddMapping(quickControls2Lib, QtModule.QuickControls2);
+            AddMapping(quickParticlesLib, QtModule.QuickParticles);
+            AddMapping(quickTemplatesLib, QtModule.QuickTemplates);
+            AddMapping(scxmlLib, QtModule.Scxml);
+            AddMapping(serialBusLib, QtModule.SerialBus);
+            AddMapping(webEngineLib, QtModule.WebEngine);
+            AddMapping(webEngineCoreLib, QtModule.WebEngineCore);
+            AddMapping(webEngineWidgetsLib, QtModule.WebEngineWidgets);
+            AddMapping(webViewLib, QtModule.WebView);
+            
             FormBorderStyle = FormBorderStyle.FixedDialog;
             this.KeyPress += new KeyPressEventHandler(this.FormProjectQtSettings_KeyPress);
         }
@@ -183,7 +241,7 @@ namespace QtPackage
 
         private void FormProjectQtSettings_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 27)
+            if (e.KeyChar == (char)Keys.Escape)
             {
                 DialogResult = DialogResult.Cancel;
                 Close();
@@ -198,12 +256,31 @@ namespace QtPackage
             this.Close();
         }
 
+        public static string NormalizePath(string path)
+        {
+            return System.IO.Path.GetFullPath(path)
+                       .TrimEnd(System.IO.Path.DirectorySeparatorChar, System.IO.Path.AltDirectorySeparatorChar)
+                       .ToLowerInvariant();
+        }
+
+        public static bool comparePath(string path1, string path2)
+        {
+            return NormalizePath(path1) == NormalizePath(path2);
+        }
+
+        public static string libraryPathToName(string path)
+        {
+            return System.IO.Path.GetFileNameWithoutExtension(path).Replace("Qt5", "");
+        }
+
         private void InitModules()
         {
             var versionManager = QtVersionManager.The();
             var qtVersion = qtProject.GetQtVersion();
             var installPath = versionManager.GetInstallPath(qtVersion);
 
+            var modulesList = getQtLibs(qtProject.GetQtVersion());
+            //var projectModules = new List<string>();
             for (int i = 0; i < moduleMap.Count; ++i)
             {
                 var item = moduleMap[i];
@@ -219,16 +296,89 @@ namespace QtPackage
                     libraryPrefix = "Qt5" + libraryPrefix.Substring(2);
                 }
                 var fullPath = installPath + "\\lib\\" + libraryPrefix + ".lib";
-                var fileInfo = new System.IO.FileInfo(fullPath);
-                item.checkbox.Enabled = fileInfo.Exists;
-                if ( !fileInfo.Exists )
+                var isExists = System.IO.File.Exists(fullPath);
+                item.checkbox.Enabled = isExists;
+                //foreach (var module in modulesList)
+                //{
+                //    if (comparePath(fullPath, module) && item.initialValue && isExists)
+                //    {
+                //        projectModules.Add(module);
+                //    }
+                //}
+                // Don't disable item if qtVersion not available
+                if ( !isExists && qtVersion != null )
                 {
-                    // Don't disable item if qtVersion not available
-                    if (qtVersion != null) { 
-                        item.checkbox.Checked = false;
-                    }
+                    item.checkbox.Checked = false;
                 }
             }
+
+            var projectLibs = getUsedLibs(qtProject.Project);
+            modulesListBox.Items.Clear();
+            foreach (var item in modulesList)
+            {
+                var libName = System.IO.Path.GetFileName(item);
+                modulesListBox.Items.Add(libraryPathToName(item), projectLibs.Contains(libName));
+            }
+        }
+
+        private List<string> getQtLibs(string qtVersion)
+        {
+            if (qtVersion == null)
+            {
+                throw new ArgumentNullException("qtVersion");
+            }
+
+            List<string> modulesNames = new List<string>();
+            try
+            {
+                var versionManager = QtVersionManager.The();
+                var installPath = versionManager.GetInstallPath(qtVersion);
+                var libPath = installPath + @"\lib\";
+                var libs = System.IO.Directory.GetFiles(libPath, "*.lib");//*Qt5
+                var listLibs = new List<string>(libs);
+                foreach ( var item in libs)
+                {
+                    //Exclude Debug version libs
+                    if (item.Contains( "d.lib" ) && 
+                        listLibs.Contains( item.Replace("d.lib",".lib") ) )
+                    {
+                        continue;
+                    }
+
+                    modulesNames.Add(item);
+                }
+            }
+            catch ( Exception exception )
+            {
+                MessageBox.Show("Init Modules Exception: " + exception.Message);
+            }
+            return modulesNames;
+        }
+
+        private List<string> getUsedLibs(Project project)
+        {
+            if (project == null)
+            {
+                throw new ArgumentNullException("project");
+            }
+
+            List<string> libs = new List<string>();
+
+            VCProject vcPro = project.Object as VCProject;
+            foreach (VCConfiguration config in (IVCCollection)vcPro.Configurations)
+            {
+                var compiler = CompilerToolWrapper.Create(config);
+                var linker = ((IVCCollection)config.Tools).Item("VCLinkerTool") as VCLinkerTool;
+                
+                if (linker != null)
+                {
+                    var linkerWrapper = new LinkerToolWrapper(linker);
+                    var additionalDeps = linkerWrapper.AdditionalDependencies;
+                    libs.AddRange(additionalDeps);
+                }
+            }
+
+            return libs;
         }
 
         private void saveModules()
@@ -236,7 +386,7 @@ namespace QtPackage
             qtProject = QtProject.Create(project);
             for (int i = 0; i < moduleMap.Count; ++i)
             {
-                ModuleMapItem item = moduleMap[i];
+                var item = moduleMap[i];
                 bool isModuleChecked = item.checkbox.Checked;
                 if (isModuleChecked != item.initialValue)
                 {

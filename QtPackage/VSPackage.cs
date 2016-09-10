@@ -19,7 +19,7 @@ using Microsoft.VisualStudio.VSHelp;
 
 namespace QtPackage {
     [PackageRegistration( UseManagedResourcesOnly = true )]
-    [InstalledProductRegistration( "#110", "#112", "1.3.9", IconResourceID = 400 )]
+    [InstalledProductRegistration( "#110", "#112", "1.3.10", IconResourceID = 400 )]
     [Guid( VSPackageGuids.PackageGuidString )]
     [ProvideAutoLoad( UIContextGuids.SolutionExists )]
     [SuppressMessage( "StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms" )]
@@ -143,7 +143,7 @@ namespace QtPackage {
         }
 
         public static bool isTemplatesInstalled() {
-            var path = vsPath + @"VC\vcprojects\Qt5 Projects\install_v1.3.9";
+            var path = vsPath + @"VC\vcprojects\Qt5 Projects\install_v1.3.10";
             return File.Exists( path );
         }
 

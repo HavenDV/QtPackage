@@ -48,7 +48,7 @@ namespace regtemplate {
         }
 
         static void setAsInstalled( string vcPath ) {
-            var filePath = vcPath + @"vcprojects\Qt5 Projects\install_v1.3.9";
+            var filePath = vcPath + @"vcprojects\Qt5 Projects\install_v1.3.10";
             if ( File.Exists( filePath ) ) {
                 return;
             }

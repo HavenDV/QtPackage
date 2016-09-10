@@ -55,7 +55,7 @@ namespace Digia.Qt5ProjectLib
     /// So we have to use the reflection system to get and set the desired properties.
     /// This class should be the only place where VCCLCompilerTool is used.
     /// Using VCCLCompilerTool directly will break the VS integration for Win CE.
-    class CompilerToolWrapper
+    public class CompilerToolWrapper
     {
         private VCCLCompilerTool compilerTool;
         private Object compilerObj;
