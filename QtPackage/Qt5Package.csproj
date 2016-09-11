@@ -219,6 +219,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="lgpl.txt" />
     <Content Include="Libs\Qt5ProjectEngineLib.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -358,9 +359,9 @@
     <ProjectReference Include="..\QtProjectTemplate\QtProjectTemplate.csproj">
       <Project>{E96D6053-8284-4221-B850-196A0E3C4E42}</Project>
       <Name>QtProjectTemplate</Name>
-      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+      <VSIXSubPath>TestProjectTemplate</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3bVSIXContainerProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
     </ProjectReference>
     <ProjectReference Include="..\QtResourceTemplate\QtResourceTemplate.csproj">
       <Project>{4D8F822E-5479-40A3-88FF-E217BFFA3605}</Project>

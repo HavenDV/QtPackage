@@ -5,6 +5,7 @@
     <DisplayName>Qt5Package</DisplayName>
     <Description xml:space="preserve">Fully functional repeats Qt VS Addin</Description>
     <MoreInfo>https://visualstudiogallery.msdn.microsoft.com/c89ff880-8509-47a4-a262-e4fa07168408</MoreInfo>
+    <License>lgpl.txt</License>
     <ReleaseNotes>CHANGES.txt</ReleaseNotes>
     <Icon>icon.ico</Icon>
     <PreviewImage>preview.png</PreviewImage>
