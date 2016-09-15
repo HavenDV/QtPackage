@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="Qt5Package.Konstantin Stukov56ed3e6e-82f8-4e12-a4de-baea113f158c" Version="1.3.10" Language="en-US" Publisher="Konstantin Stukov" />
+    <Identity Id="Qt5Package.Konstantin Stukov56ed3e6e-82f8-4e12-a4de-baea113f158c" Version="1.3.11" Language="en-US" Publisher="Konstantin Stukov" />
     <DisplayName>Qt5Package</DisplayName>
     <Description xml:space="preserve">Fully functional repeats Qt VS Addin</Description>
     <MoreInfo>https://visualstudiogallery.msdn.microsoft.com/c89ff880-8509-47a4-a262-e4fa07168408</MoreInfo>

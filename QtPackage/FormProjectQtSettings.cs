@@ -323,12 +323,13 @@ namespace QtPackage
 
         private List<string> getQtLibs(string qtVersion)
         {
+            List<string> modulesNames = new List<string>();
             if (qtVersion == null)
             {
-                throw new ArgumentNullException("qtVersion");
+                //throw new ArgumentNullException("qtVersion");
+                return modulesNames;
             }
 
-            List<string> modulesNames = new List<string>();
             try
             {
                 var versionManager = QtVersionManager.The();
@@ -350,7 +351,7 @@ namespace QtPackage
             }
             catch ( Exception exception )
             {
-                MessageBox.Show("Init Modules Exception: " + exception.Message);
+                MessageBox.Show("getQtLibs() Exception: " + exception.Message);
             }
             return modulesNames;
         }
