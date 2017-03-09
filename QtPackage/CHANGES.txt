@@ -1,3 +1,8 @@
+2017-03-10 version 1.3.12:
+
+  Qt Package
+  * Updated to VS2017
+  
   2016-09-15 version 1.3.11:
 
   Qt Package

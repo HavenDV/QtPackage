@@ -812,4 +812,7 @@ Note: If Visual Studio is currently not responsive, this is because it updates i
   <data name="InstallTemplatesTitle" xml:space="preserve">
     <value>Confirm install templates</value>
   </data>
+  <data name="BuildOptionsPage_Bits" xml:space="preserve">
+    <value>Bits</value>
+  </data>
 </root>
