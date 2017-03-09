@@ -44,7 +44,6 @@ using System.IO;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using EnvDTE;
-using EnvDTE80;
 using Microsoft.VisualStudio.VCProjectEngine;
 using System.Text.RegularExpressions;
 using System.Net.Sockets;
@@ -83,7 +82,7 @@ namespace QtPackage
         {
             simpleThreadMessenger = new SimpleThreadMessenger(this);
             dte = _dte;
-            Events2 events = dte.Events as Events2;
+            var events = dte.Events as Events;
 
             buildEvents = (EnvDTE.BuildEvents)events.BuildEvents;
             buildEvents.OnBuildBegin += new _dispBuildEvents_OnBuildBeginEventHandler(buildEvents_OnBuildBegin);
@@ -93,7 +92,7 @@ namespace QtPackage
             documentEvents = (EnvDTE.DocumentEvents)events.get_DocumentEvents(null);
             documentEvents.DocumentSaved += new _dispDocumentEvents_DocumentSavedEventHandler(this.DocumentSaved);
 
-            projectItemsEvents = (ProjectItemsEvents)events.ProjectItemsEvents;
+            projectItemsEvents = events.SolutionItemsEvents;
             projectItemsEvents.ItemAdded += new _dispProjectItemsEvents_ItemAddedEventHandler(this.ProjectItemsEvents_ItemAdded);
             projectItemsEvents.ItemRemoved += new _dispProjectItemsEvents_ItemRemovedEventHandler(this.ProjectItemsEvents_ItemRemoved);
             projectItemsEvents.ItemRenamed += new _dispProjectItemsEvents_ItemRenamedEventHandler(this.ProjectItemsEvents_ItemRenamed);

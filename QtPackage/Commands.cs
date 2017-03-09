@@ -71,11 +71,7 @@ namespace QtPackage
         /// <summary>
         /// Gets the service provider from the owner package.
         /// </summary>
-        private IServiceProvider ServiceProvider {
-            get {
-                return package;
-            }
-        }
+        private IServiceProvider ServiceProvider => package;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Command1"/> class.
