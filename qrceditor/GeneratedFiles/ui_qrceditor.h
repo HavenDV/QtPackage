@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'qrceditor.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.0
+** Created by: Qt User Interface Compiler version 5.9.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -146,13 +146,13 @@ public:
 
     void retranslateUi(QWidget *QrcEditor)
     {
-        addButton->setText(QApplication::translate("QrcEditor", "Add", 0));
-        removeButton->setText(QApplication::translate("QrcEditor", "Remove", 0));
-        groupBox->setTitle(QApplication::translate("QrcEditor", "Properties", 0));
-        aliasLabel->setText(QApplication::translate("QrcEditor", "Alias:", 0));
-        prefixLabel->setText(QApplication::translate("QrcEditor", "Prefix:", 0));
-        languageLabel->setText(QApplication::translate("QrcEditor", "Language:", 0));
-        urlLabel->setText(QApplication::translate("QrcEditor", "Resource URL:", 0));
+        addButton->setText(QApplication::translate("QrcEditor", "Add", Q_NULLPTR));
+        removeButton->setText(QApplication::translate("QrcEditor", "Remove", Q_NULLPTR));
+        groupBox->setTitle(QApplication::translate("QrcEditor", "Properties", Q_NULLPTR));
+        aliasLabel->setText(QApplication::translate("QrcEditor", "Alias:", Q_NULLPTR));
+        prefixLabel->setText(QApplication::translate("QrcEditor", "Prefix:", Q_NULLPTR));
+        languageLabel->setText(QApplication::translate("QrcEditor", "Language:", Q_NULLPTR));
+        urlLabel->setText(QApplication::translate("QrcEditor", "Resource URL:", Q_NULLPTR));
         Q_UNUSED(QrcEditor);
     } // retranslateUi
 
