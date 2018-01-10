@@ -79,33 +79,32 @@ namespace QtPackage
         /// </summary>
         /// <param name="package">Owner package, not null.</param>
         private Commands( Package package ) {
-            if ( package == null ) {
-                throw new ArgumentNullException( "package" );
-            }
-            this.package = package;
+            this.package = package ?? throw new ArgumentNullException( "package" );
 
-            menuCommands = new Dictionary<string, MenuCommand>();
-            menuCommands[ "loadDesigner" ] = addCommand( loadDesignerCommandId, loadDesigner );
-            menuCommands[ "loadLinguist" ] = addCommand( loadLinguistCommandId, loadLinguist );
-            menuCommands[ "importProFile" ] = addCommand( importProFileCommandId, importProFile );
-            menuCommands[ "importPriFile" ] = addCommand( importPriFileCommandId, importPriFile );
-            menuCommands[ "exportPriFile" ] = addCommand( exportPriFileCommandId, exportPriFile );
-            menuCommands[ "exportProFile" ] = addCommand( exportProFileCommandId, exportProFile );
-            menuCommands[ "createNewTranslationFile" ] = addCommand( createNewTranslationFileCommandId, createNewTranslationFile );
-            menuCommands[ "lupdateProject" ] = addCommand( lupdateProjectCommandId, lupdateProject );
-            menuCommands[ "lreleaseProject" ] = addCommand( lreleaseProjectCommandId, lreleaseProject );
-            menuCommands[ "lupdateSolution" ] = addCommand( lupdateSolutionCommandId, lupdateSolution );
-            menuCommands[ "lreleaseSolution" ] = addCommand( lreleaseSolutionCommandId, lreleaseSolution );
-            menuCommands[ "convertToQt" ] = addCommand( convertToQtCommandId, convertToQt );
-            menuCommands[ "convertToQMake" ] = addCommand( convertToQMakeCommandId, convertToQMake );
-            menuCommands[ "projectQtSettings" ] = addCommand( projectQtSettingsCommandId, projectQtSettings );
-            menuCommands[ "changeProjectQtVersion" ] = addCommand( changeProjectQtVersionCommandId, changeProjectQtVersion );
-            menuCommands[ "vsQtOptions" ] = addCommand( vsQtOptionsCommandId, vsQtOptions );
-            menuCommands[ "changeSolutionQtVersion" ] = addCommand( changeSolutionQtVersionCommandId, changeSolutionQtVersion );
-            menuCommands[ "lupdate" ] = addCommand( lupdateCommandId, lupdate );
-            menuCommands[ "lrelease" ] = addCommand( lreleaseCommandId, lrelease );
-            menuCommands[ "helpQt" ] = addCommand( helpQtCommandId, helpQt );
-            menuCommands[ "reinstall" ] = addCommand( reinstallCommandId, reinstallTemlates );
+            menuCommands = new Dictionary<string, MenuCommand>
+            {
+                ["loadDesigner"] = addCommand(loadDesignerCommandId, loadDesigner),
+                ["loadLinguist"] = addCommand(loadLinguistCommandId, loadLinguist),
+                ["importProFile"] = addCommand(importProFileCommandId, importProFile),
+                ["importPriFile"] = addCommand(importPriFileCommandId, importPriFile),
+                ["exportPriFile"] = addCommand(exportPriFileCommandId, exportPriFile),
+                ["exportProFile"] = addCommand(exportProFileCommandId, exportProFile),
+                ["createNewTranslationFile"] = addCommand(createNewTranslationFileCommandId, createNewTranslationFile),
+                ["lupdateProject"] = addCommand(lupdateProjectCommandId, lupdateProject),
+                ["lreleaseProject"] = addCommand(lreleaseProjectCommandId, lreleaseProject),
+                ["lupdateSolution"] = addCommand(lupdateSolutionCommandId, lupdateSolution),
+                ["lreleaseSolution"] = addCommand(lreleaseSolutionCommandId, lreleaseSolution),
+                ["convertToQt"] = addCommand(convertToQtCommandId, convertToQt),
+                ["convertToQMake"] = addCommand(convertToQMakeCommandId, convertToQMake),
+                ["projectQtSettings"] = addCommand(projectQtSettingsCommandId, projectQtSettings),
+                ["changeProjectQtVersion"] = addCommand(changeProjectQtVersionCommandId, changeProjectQtVersion),
+                ["vsQtOptions"] = addCommand(vsQtOptionsCommandId, vsQtOptions),
+                ["changeSolutionQtVersion"] = addCommand(changeSolutionQtVersionCommandId, changeSolutionQtVersion),
+                ["lupdate"] = addCommand(lupdateCommandId, lupdate),
+                ["lrelease"] = addCommand(lreleaseCommandId, lrelease),
+                ["helpQt"] = addCommand(helpQtCommandId, helpQt),
+                ["reinstall"] = addCommand(reinstallCommandId, reinstallTemlates)
+            };
         }
 
 
