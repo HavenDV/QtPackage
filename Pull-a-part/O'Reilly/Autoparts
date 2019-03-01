@@ -1,0 +1,154 @@
+Skip to content
+Your account has been flagged.
+Because of that, your profile is hidden from the public. If you believe this is a mistake, contact support to have your account status reviewed.
+full open source print
+Repositories3
+Code16M+
+Commits25K
+Issues32K
+Marketplace0
+Topics0
+Wikis8K
+Users0
+Language
+
+Sort
+
+Showing 13,100,861 available code results 
+@HavenDV
+HavenDV/QtPackage – collectHelpFiles.pl
+Showing the top 10 matches
+Last indexed on Jul 2, 2018
+Perl
+my $fullName = $outPath . $projectName;
+open PRO, "> $fullName" or die "can not open file $fullName";
+print PRO "<?xml version=\"1.0\"?>\n";
+$fullName = $outPath . $outHxCFile;
+open HxC, "> $fullName" or die "can not open file $fullName";
+print HxC "<?xml version=\"1.0\"?>\n";
+@lakiduo
+lakiduo/QtAddin – collectHelpFiles.pl
+Showing the top 10 matches
+Last indexed on Jun 29, 2018
+Perl
+my $fullName = $outPath . $projectName;
+open PRO, "> $fullName" or die "can not open file $fullName";
+print PRO "<?xml version=\"1.0\"?>\n";
+$fullName = $outPath . $outHxCFile;
+open HxC, "> $fullName" or die "can not open file $fullName";
+print HxC "<?xml version=\"1.0\"?>\n";
+@nandeda89
+nandeda89/Machine_Learning_Concepts – SGDClassifier.ipynb
+Showing the top six matches
+Last indexed on Jul 2, 2018
+Jupyter Notebook
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "print(clf.predict([[-1, -1], [-2, -1], [2, 1],[4, -5]]))"
+   "outputs": [],
+   "source": [
+    "print(type(iris))\n",
+    "print(type(X))\n",
+    "print(type(Y))"
+@carlsoncoder
+carlsoncoder/budgettracker – copyToOpenShift.py
+Showing the top seven matches
+Last indexed on Jun 30, 2018
+Python
+    def printObjectDetails(self):
+        print self.fileName, '; ', self.relativePath, '; ', self.fullPath
+
+    def buildKey(self):
+                shutil.copy2(sourceFileInfo.fullPath, targetFileInfo.fullPath)
+        else:
+            print 'Source file: [', sourceFileTimes[fileKey].fullPath, '] does NOT exist in target - file will be copied'
+@RebeccaHudson
+RebeccaHudson/atsnp_pipeline – rdata2sqlite.R
+Showing the top five matches
+Last indexed on Jul 3, 2018
+R
+  name_of_output_file <- paste(name_of_output_file, "db", sep = ".")
+  full_path_to_output <- file.path(output_dir, name_of_output_file) 
+  #print(paste("full path to output: ", full_path_to_output))
+  if ( file.exists(full_path_to_output) ) { 
+     print(paste("Output file already exists. Deleting.", full_path_to_output))
+@RebeccaHudson
+RebeccaHudson/atsnp_pipeline – rdata2sqlite.R
+Showing the top five matches
+Last indexed on Jul 3, 2018
+R
+  name_of_output_file <- paste(name_of_output_file, "db", sep = ".")
+  full_path_to_output <- file.path(output_dir, name_of_output_file) 
+  #print(paste("full path to output: ", full_path_to_output))
+  if ( file.exists(full_path_to_output) ) { 
+     print(paste("Output file already exists. Deleting.", full_path_to_output))
+@artpol84
+artpol84/ompi-timings_v2 – check-help-strings.pl
+Showing the top five matches
+Last indexed on Jun 28, 2018
+Perl
+        $short =~ /\.cc$/) {
+        push(@source_files, {
+            full => $File::Find::name,
+            short => $short,
+        verbose("    Found source file: $short\n");
+    }
+}
+
+# Find all source and help files
+print "Searching for source and help files...\n";
+@meriac
+meriac/openbeacon-ng – OpenBeacon-Tag-BL.PrjPCB
+Showing the top three matches
+Last indexed on Jun 28, 2018
+PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
+OutputType1=Assembler Source Print
+OutputName1=Assembler Source Prints
+OutputDocumentPath1=
+OutputVariantName1=
+OutputDefault1=0
+@maxxwizard
+maxxwizard/algorithms4 – Percolation.java
+Showing the top five matches
+Last indexed on Jul 4, 2018
+Java
+        Percolation p = new Percolation(3);
+
+        p.printDebugGrid();
+        assert !p.isOpen(3, 3);
+        assert !p.isFull(2, 2);
+                int pos = row*gridSize + col;
+                System.out.print(openFull[pos] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+@VanTanev
+VanTanev/acift – events.py
+Showing the top six matches
+Last indexed on Jun 29, 2018
+Python
+            self.options.fullScreen = True - self.options.fullScreen
+        print "Fullscreen is now set to: %s"% self.options.fullScreen
+        print "Going to image %d out of %d." %(self.source.current + 1, self.source.size)
+        self.openImage()
+
+    def First(self):
+        self.source.current = 0
+        print "Going to image %d out of %d." %(self.source.current + 1, self.source.size)
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
